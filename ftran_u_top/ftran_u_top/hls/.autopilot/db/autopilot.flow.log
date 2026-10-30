@@ -5791,3 +5791,108 @@ INFO: [HLS 200-1510] Running: close_project
 Execute     close_solution 
 Execute       cleanup_all 
 Execute       cleanup_all 
+INFO-FLOW: Workspace /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls opened at Thu Oct 29 20:23:20 MDT 2026
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Command   open_solution done; 0.12 sec.
+Execute   apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg 
+INFO: [HLS 200-1510] Running: apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1909@%s /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg 
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(10)
+Execute     add_files /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp 
+INFO: [HLS 200-10] Adding design file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.cflags=-std=c++14 -ffp-contract=off' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(11) 
+INFO: [HLS 200-1465] Applying ini 'syn.cflags=-std=c++14 -ffp-contract=off' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(11)
+Execute     add_files * -appendflags -cflags -std=c++14 -ffp-contract=off 
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(12)
+Execute     add_files -tb /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(13) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(13)
+Execute     add_files -tb /proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp 
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(14) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(14)
+Execute     add_files -tb /proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps 
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.cflags=-std=c++14 -ffp-contract=off -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/HiGHS' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(15) 
+INFO: [HLS 200-1465] Applying ini 'tb.cflags=-std=c++14 -ffp-contract=off -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/HiGHS' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(15)
+Execute     add_files -tb * -appendflags -cflags -std=c++14 -ffp-contract=off -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/HiGHS 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=ftran_u_hw' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=ftran_u_hw' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(9)
+Execute     set_top ftran_u_hw 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(4)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xcu280-fsvh2892-2L-e' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xcu280-fsvh2892-2L-e' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(1)
+Execute     set_part xcu280-fsvh2892-2L-e 
+Execute       create_platform xcu280-fsvh2892-2L-e -board  
+DBG:HLSDevice: Trying to load device library: /fpga/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /fpga/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+Command       create_platform done; 2.4 sec.
+Execute       source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute         source /fpga/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 2.52 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=5ns' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'clock=5ns' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(7)
+Execute     create_clock -period 5ns 
+Execute       ap_set_clock -name default -period 5 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock_uncertainty=1%' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=1%' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(8)
+Execute     set_clock_uncertainty 1% 
+Execute       ap_set_clock -name default -uncertainty 0.05 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.05ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'cosim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(17) 
+INFO: [HLS 200-1465] Applying ini 'cosim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(17)
+Execute     config_cosim -ldflags /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl 
+Execute     send_msg_by_id INFO @200-1465@%s 'csim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(16) 
+INFO: [HLS 200-1465] Applying ini 'csim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(16)
+Execute     config_csim -ldflags /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl 
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(5)
+Execute     config_export -format=ip_catalog 
+Command   apply_ini done; 2.62 sec.
+Execute   apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline 
+INFO: [HLS 200-1510] Running: apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline 
+Execute     send_msg_by_id INFO @200-1909@%s /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline 
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+Execute   csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.12 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 0.57 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.24 seconds. CPU system time: 0.26 seconds. Elapsed time: 0.57 seconds; current allocated memory: 0.422 MB.
+Execute   close_project 
+INFO: [HLS 200-1510] Running: close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 

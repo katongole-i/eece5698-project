@@ -1,7 +1,6 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../ftran_u.cpp in debug mode
-   Generating csim.exe
+make: 'csim.exe' is up to date.
 Running HiGHS 1.15.1 (git hash: 73cac48c53): Copyright (c) 2026 under MIT licence terms
 Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
 Number of BV entries in BOUNDS section is 4
@@ -42,14 +41,14 @@ Solving report
   Primal bound      26
   Dual bound        26
   Gap               0% (tolerance: 0.01%)
-  P-D integral      0.0117900447069
+  P-D integral      0.0097805137548
   Solution status   feasible
                     26 (objective)
                     0 (bound viol.)
                     0 (int. viol.)
                     0 (row viol.)
-  Timing            0.04
-                    0.01 (Presolve)
+  Timing            0.03
+                    0.00 (Presolve)
                     0.03 (Solve)
                     0.00 (Postsolve)
   Max sub-MIP depth 0

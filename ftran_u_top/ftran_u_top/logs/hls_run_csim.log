@@ -1,4 +1,4 @@
-INFO: [vitis-run 60-1548] Creating build summary session with primary output /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/ftran_u_top.hlsrun_csim_summary, at Thu Oct 29 19:52:56 2026
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/ftran_u_top.hlsrun_csim_summary, at Thu Oct 29 20:23:18 2026
 INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top -config /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg -cmdlineconfig /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
 
 ****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
@@ -10,7 +10,7 @@ INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_di
 
 source /fpga/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/fpga/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'ikato' on host 'fpga-build1vm-2.cloudlab.umass.edu' (Linux_x86_64 version 5.15.0-198-generic) on Thu Oct 29 19:52:58 MDT 2026
+INFO: [HLS 200-10] For user 'ikato' on host 'fpga-build1vm-2.cloudlab.umass.edu' (Linux_x86_64 version 5.15.0-198-generic) on Thu Oct 29 20:23:20 MDT 2026
 INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
 INFO: [HLS 200-10] In directory '/proj/octfpga-PG0/ikato/proj/ftran_u_top'
 INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg
@@ -51,8 +51,7 @@ INFO: [HLS 200-1510] Running: csim_design
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
-   Compiling ../../../../ftran_u.cpp in debug mode
-   Generating csim.exe
+make: 'csim.exe' is up to date.
 Running HiGHS 1.15.1 (git hash: 73cac48c53): Copyright (c) 2026 under MIT licence terms
 Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
 Number of BV entries in BOUNDS section is 4
@@ -93,14 +92,14 @@ Solving report
   Primal bound      26
   Dual bound        26
   Gap               0% (tolerance: 0.01%)
-  P-D integral      0.0117900447069
+  P-D integral      0.0097805137548
   Solution status   feasible
                     26 (objective)
                     0 (bound viol.)
                     0 (int. viol.)
                     0 (row viol.)
-  Timing            0.04
-                    0.01 (Presolve)
+  Timing            0.03
+                    0.00 (Presolve)
                     0.03 (Solve)
                     0.00 (Postsolve)
   Max sub-MIP depth 0
@@ -115,8 +114,8 @@ HW objective: 26
 TEST PASSED
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.46 seconds. CPU system time: 0.56 seconds. Elapsed time: 2.31 seconds; current allocated memory: 0.422 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.24 seconds. CPU system time: 0.26 seconds. Elapsed time: 0.57 seconds; current allocated memory: 0.422 MB.
 INFO: [HLS 200-1510] Running: close_project 
-INFO: [HLS 200-112] Total CPU user time: 2.52 seconds. Total CPU system time: 1.19 seconds. Total elapsed time: 5.7 seconds; peak allocated memory: 266.984 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Thu Oct 29 19:53:03 2026...
-INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 9s
+INFO: [HLS 200-112] Total CPU user time: 2.43 seconds. Total CPU system time: 1.01 seconds. Total elapsed time: 4.65 seconds; peak allocated memory: 266.984 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Oct 29 20:23:24 2026...
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 8s
