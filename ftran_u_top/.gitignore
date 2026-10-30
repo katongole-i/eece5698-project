@@ -1,5 +1,12 @@
 # Ignore build output directory
-/build
+/build/*
+!/build/lib
+/build/lib/*
+!/build/lib/libhighs.a
+!/build/lib/libhighs_extras.a
+!/build/HiGHS
+/build/HiGHS/*
+!/build/HiGHS/HConfig.h
 
 
 # Ignore object files and dependent files

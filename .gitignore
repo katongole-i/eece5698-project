@@ -1,5 +1,4 @@
 # Ignore build output directory
-/build
 
 
 # Ignore object files and dependent files
