@@ -1,0 +1,3 @@
+relativeroot=/proj/octfpga-PG0/ikato/proj/ftran_u_top
+original_argv=--mode hls --csim --config /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg --work_dir ftran_u_top 
+

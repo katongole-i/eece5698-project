@@ -1,0 +1,172 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/ftran_u_top.hlsrun_csim_summary, at Tue Oct 27 19:54:44 2026
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top -config /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg -cmdlineconfig /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /fpga/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/fpga/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ikato' on host 'build1vm-1.cloudlab.umass.edu' (Linux_x86_64 version 5.15.0-198-generic) on Tue Oct 27 19:54:46 MDT 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
+INFO: [HLS 200-10] In directory '/proj/octfpga-PG0/ikato/proj/ftran_u_top'
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+INFO: [HLS 200-2005] Using work_dir /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top 
+INFO: [HLS 200-1510] Running: open_project /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top -diskless 
+INFO: [HLS 200-1510] Running: open_solution hls 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg 
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg
+INFO: [HLS 200-1465] Applying ini 'syn.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.cflags=-std=c++14 -ffp-contract=off' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.cflags=-std=c++14 -ffp-contract=off -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/HiGHS' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying ini 'syn.top=ftran_u_hw' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xcu280-fsvh2892-2L-e' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1465] Applying ini 'clock=5ns' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=1%' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.05ns.
+INFO: [HLS 200-1465] Applying ini 'cosim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(17)
+INFO: [HLS 200-1465] Applying ini 'csim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(5)
+INFO: [HLS 200-1510] Running: apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline 
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Generating csim.exe
+Running HiGHS 1.15.1 (git hash: 73cac48c53): Copyright (c) 2026 under MIT licence terms
+Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
+Number of LI entries in BOUNDS section is 2
+Number of UI entries in BOUNDS section is 2
+MIP tiny has 2 rows; 2 cols; 4 nonzeros; 2 integer variables (0 binary)
+Coefficient ranges:
+  Matrix  [1e+00, 2e+00]
+  Cost    [2e+00, 3e+00]
+  Bound   [2e+00, 2e+00]
+  RHS     [4e+00, 4e+00]
+Presolving model
+2 rows, 2 cols, 4 nonzeros 0s
+2 rows, 2 cols, 4 nonzeros 0s
+Presolve reductions: rows 2(-0); columns 2(-0); nonzeros 4(-0) - Not reduced
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   2 rows
+   2 cols (0 binary, 2 integer, 0 implied int., 0 continuous, 0 domain fixed)
+   4 nonzeros
+   Thread count 4 (of 8 threads). Using 1 max workers. Parallel search off
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ z       0       0         0   0.00%   inf             -0                 Large        0      0      0         0     0.0s
+ J       0       0         0 100.00%   inf             6                  Large        0      0      0         0     0.0s
+         1       0         1 100.00%   6               6                  0.00%        0      0      0         0     0.0s
+
+Solving report
+  Model             tiny
+  Status            Optimal
+  Primal bound      6
+  Dual bound        6
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      6.35782877604e-07
+  Solution status   feasible
+                    6 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            0.04
+                    0.01 (Presolve)
+                    0.03 (Solve)
+                    0.00 (Postsolve)
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0
+  LP iterations     0
+Running HiGHS 1.15.1 (git hash: 73cac48c53): Copyright (c) 2026 under MIT licence terms
+Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
+Number of LI entries in BOUNDS section is 2
+Number of UI entries in BOUNDS section is 2
+MIP tiny has 2 rows; 2 cols; 4 nonzeros; 2 integer variables (0 binary)
+Coefficient ranges:
+  Matrix  [1e+00, 2e+00]
+  Cost    [2e+00, 3e+00]
+  Bound   [2e+00, 2e+00]
+  RHS     [4e+00, 4e+00]
+Presolving model
+2 rows, 2 cols, 4 nonzeros 0s
+2 rows, 2 cols, 4 nonzeros 0s
+Presolve reductions: rows 2(-0); columns 2(-0); nonzeros 4(-0) - Not reduced
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   2 rows
+   2 cols (0 binary, 2 integer, 0 implied int., 0 continuous, 0 domain fixed)
+   4 nonzeros
+   Thread count 4 (of 8 threads). Using 1 max workers. Parallel search off
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ z       0       0         0   0.00%   inf             -0                 Large        0      0      0         0     0.0s
+ J       0       0         0 100.00%   inf             6                  Large        0      0      0         0     0.0s
+         1       0         1 100.00%   6               6                  0.00%        0      0      0         0     0.0s
+
+Solving report
+  Model             tiny
+  Status            Optimal
+  Primal bound      6
+  Dual bound        6
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      4.37100728353e-07
+  Solution status   feasible
+                    6 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            0.01
+                    0.00 (Presolve)
+                    0.01 (Solve)
+                    0.00 (Postsolve)
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0
+  LP iterations     0
+SW objective: 6
+HW objective: 6
+TEST PASSED
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.45 seconds. CPU system time: 0.81 seconds. Elapsed time: 2.78 seconds; current allocated memory: 0.438 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 2.07 seconds. Total CPU system time: 1.52 seconds. Total elapsed time: 5.87 seconds; peak allocated memory: 267.012 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Oct 27 19:54:51 2026...
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 9s

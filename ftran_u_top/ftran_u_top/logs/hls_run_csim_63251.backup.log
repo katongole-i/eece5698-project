@@ -1,0 +1,132 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/ftran_u_top.hlsrun_csim_summary, at Tue Oct 27 19:24:57 2026
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top -config /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg -cmdlineconfig /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /fpga/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/fpga/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ikato' on host 'build1vm-1.cloudlab.umass.edu' (Linux_x86_64 version 5.15.0-198-generic) on Tue Oct 27 19:24:59 MDT 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
+INFO: [HLS 200-10] In directory '/proj/octfpga-PG0/ikato/proj/ftran_u_top'
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+INFO: [HLS 200-2005] Using work_dir /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top 
+INFO: [HLS 200-1510] Running: open_project /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top -diskless 
+INFO: [HLS 200-1510] Running: open_solution hls 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg 
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg
+INFO: [HLS 200-1465] Applying ini 'syn.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.cflags=-std=c++14 -ffp-contract=off' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.cflags=-std=c++14 -ffp-contract=off -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/HiGHS' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(12)
+INFO: [HLS 200-1465] Applying ini 'syn.top=ftran_u_hw' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(6)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vitis' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1465] Applying ini 'part=xcu280-fsvh2892-2L-e' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(5)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'cosim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying ini 'csim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=xo' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(15)
+INFO: [HLS 200-1510] Running: apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline 
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../ftran_u.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../ftran_u.cpp:1:
+../../../../ftran_u.h:4:13: warning: ‘ftran_u_use_hw’ initialized and declared ‘extern’
+ extern bool ftran_u_use_hw = true;
+             ^~~~~~~~~~~~~~
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/ftran_u.o:/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../ftran_u.h:4: multiple definition of `ftran_u_use_hw'; obj/ftran_u_tb.o:/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../ftran_u.h:4: first defined here
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/ftran_u.o:/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../ftran_u.h:8: multiple definition of `FTRAN_TINY'; obj/ftran_u_tb.o:/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../ftran_u.h:8: first defined here
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::setupGeneral(int, int, int, int const*, int const*, double const*, int*, double, double, int, HighsLogOptions const*, bool, int)':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:339: undefined reference to `HVectorBase<double>::setup(int)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::build(HighsTimerClock*)':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:371: undefined reference to `HFactor::rebuild(HighsTimerClock*)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:377: undefined reference to `RefactorInfo::clear()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:406: undefined reference to `highsLogDev(HighsLogOptions const&, HighsLogType, char const*, ...)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:421: undefined reference to `RefactorInfo::clear()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:439: undefined reference to `RefactorInfo::clear()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:456: undefined reference to `debugLogRankDeficiency(int, HighsLogOptions const&, int, int, int, int const&, int, int)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::ftranCall(HVectorBase<double>&, double, HighsTimerClock*) const':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:471: undefined reference to `HVectorBase<double>::reIndex()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::ftranCall(std::vector<double, std::allocator<double> >&, HighsTimerClock*)':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:482: undefined reference to `HVectorBase<double>::clearScalars()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::btranCall(HVectorBase<double>&, double, HighsTimerClock*) const':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:499: undefined reference to `HVectorBase<double>::reIndex()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::btranCall(std::vector<double, std::allocator<double> >&, HighsTimerClock*)':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:508: undefined reference to `HVectorBase<double>::clearScalars()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::update(HVectorBase<double>*, HVectorBase<double>*, int*, int*)':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:520: undefined reference to `RefactorInfo::clear()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::buildKernel()':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:891: undefined reference to `HFactor::reportAsm() const'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1047: undefined reference to `highsLogDev(HighsLogOptions const&, HighsLogType, char const*, ...)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1077: undefined reference to `highsLogDev(HighsLogOptions const&, HighsLogType, char const*, ...)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::buildHandleRankDeficiency()':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1264: undefined reference to `debugReportRankDeficiency(int, int, HighsLogOptions const&, int, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int const*, int, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1337: undefined reference to `debugReportRankDeficiency(int, int, HighsLogOptions const&, int, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int const*, int, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1357: undefined reference to `debugReportRankDeficiency(int, int, HighsLogOptions const&, int, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, int const*, int, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1360: undefined reference to `debugReportRankDeficientASM(int, HighsLogOptions const&, int, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, std::vector<double, std::allocator<double> > const&, std::vector<int, std::allocator<int> > const&, int, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::buildMarkSingC()':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1369: undefined reference to `debugReportMarkSingC(int, int, HighsLogOptions const&, int, std::vector<int, std::allocator<int> > const&, int const*)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1396: undefined reference to `debugReportMarkSingC(int, int, HighsLogOptions const&, int, std::vector<int, std::allocator<int> > const&, int const*)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::ftranL(HVectorBase<double>&, double, HighsTimerClock*) const':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1536: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1537: undefined reference to `HVectorBase<double>::pack()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1540: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::btranL(HVectorBase<double>&, double, HighsTimerClock*) const':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1636: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1637: undefined reference to `HVectorBase<double>::pack()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::ftranU(HVectorBase<double>&, double, HighsTimerClock*) const':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1652: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1653: undefined reference to `HVectorBase<double>::pack()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1659: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1660: undefined reference to `HVectorBase<double>::pack()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1753: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1754: undefined reference to `HVectorBase<double>::pack()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::btranU(HVectorBase<double>&, double, HighsTimerClock*) const':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1830: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1831: undefined reference to `HVectorBase<double>::pack()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1833: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1839: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1840: undefined reference to `HVectorBase<double>::pack()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1842: undefined reference to `HVectorBase<double>::tight()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/ftran_u_tb.o: in function `solve()':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../ftran_u_tb.cpp:13: undefined reference to `Highs::Highs()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../ftran_u_tb.cpp:14: undefined reference to `Highs::readModel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../ftran_u_tb.cpp:15: undefined reference to `Highs::run()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/ftran_u_tb.o: in function `Highs::~Highs()':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../.././HiGHS/highs/Highs.h:46: undefined reference to `Highs::closeLogFile()'
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/ftran_u_tb.o: in function `PresolveComponent::~PresolveComponent()':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../.././HiGHS/highs/presolve/PresolveComponent.h:88: undefined reference to `vtable for PresolveComponent'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile.rules:318: csim.exe] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 3.61 seconds. CPU system time: 1.02 seconds. Elapsed time: 6.61 seconds; current allocated memory: 0.406 MB.
+INFO: [HLS 200-1510] Running: close_project 
+ERROR: 4
+INFO: [HLS 200-112] Total CPU user time: 5.24 seconds. Total CPU system time: 1.65 seconds. Total elapsed time: 9.45 seconds; peak allocated memory: 267.102 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Oct 27 19:25:07 2026...

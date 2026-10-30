@@ -1,0 +1,66 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/ftran_u_top.hlsrun_csim_summary, at Thu Oct 29 19:51:02 2026
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top -config /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg -cmdlineconfig /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /fpga/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/fpga/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ikato' on host 'fpga-build1vm-2.cloudlab.umass.edu' (Linux_x86_64 version 5.15.0-198-generic) on Thu Oct 29 19:51:04 MDT 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
+INFO: [HLS 200-10] In directory '/proj/octfpga-PG0/ikato/proj/ftran_u_top'
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+INFO: [HLS 200-2005] Using work_dir /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top 
+INFO: [HLS 200-1510] Running: open_project /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top -diskless 
+INFO: [HLS 200-1510] Running: open_solution hls 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg 
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg
+INFO: [HLS 200-1465] Applying ini 'syn.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.cflags=-std=c++14 -ffp-contract=off' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(11)
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding test bench file '/proj/octfpga-PG0/ikato/proj/ftran_u_top/tiny.mps' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.cflags=-std=c++14 -ffp-contract=off -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs -I/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/HiGHS' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(15)
+INFO: [HLS 200-1465] Applying ini 'syn.top=ftran_u_hw' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(9)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xcu280-fsvh2892-2L-e' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1465] Applying ini 'clock=5ns' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=1%' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(8)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.05ns.
+INFO: [HLS 200-1465] Applying ini 'cosim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(17)
+INFO: [HLS 200-1465] Applying ini 'csim.ldflags=/proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -pthread -ldl' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(16)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' at /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg(5)
+INFO: [HLS 200-1510] Running: apply_ini /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline 
+INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../HiGHS/highs/util/HFactor.cpp in debug mode
+   Generating csim.exe
+/fpga/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.37/bin/ld: obj/HFactor.o: in function `HFactor::ftranUHWHelper(HVectorBase<double>&, double, double, FactorTimer, HighsTimerClock*) const':
+/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/csim/build/../../../../HiGHS/highs/util/HFactor.cpp:1737: undefined reference to `ftran_u_hw'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile.rules:318: csim.exe] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.53 seconds. CPU system time: 0.74 seconds. Elapsed time: 3.96 seconds; current allocated memory: 0.422 MB.
+INFO: [HLS 200-1510] Running: close_project 
+ERROR: 4
+INFO: [HLS 200-112] Total CPU user time: 3.77 seconds. Total CPU system time: 1.43 seconds. Total elapsed time: 7.46 seconds; peak allocated memory: 266.984 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu Oct 29 19:51:10 2026...

@@ -1,0 +1,17 @@
+part=xcu280-fsvh2892-2L-e
+
+[hls]
+flow_target=vivado
+package.output.format=ip_catalog
+package.output.syn=false
+clock=5ns
+clock_uncertainty=1%
+syn.top=ftran_u_hw
+syn.file=@HLS_ROOT@/ftran_u.cpp
+syn.cflags=-std=c++14 -ffp-contract=off
+tb.file=@HLS_ROOT@/ftran_u_tb.cpp
+tb.file=@HLS_ROOT@/HiGHS/highs/util/HFactor.cpp
+tb.file=@HLS_ROOT@/tiny.mps
+tb.cflags=-std=c++14 -ffp-contract=off -I@HLS_ROOT@/HiGHS/highs -I@HLS_ROOT@/build/HiGHS
+csim.ldflags=@HLS_LDFLAGS@
+cosim.ldflags=@HLS_LDFLAGS@

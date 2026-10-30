@@ -1,0 +1,66 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../ftran_u.cpp in debug mode
+   Generating csim.exe
+Running HiGHS 1.15.1 (git hash: 73cac48c53): Copyright (c) 2026 under MIT licence terms
+Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
+Number of BV entries in BOUNDS section is 4
+MIP tiny has 3 rows; 4 cols; 12 nonzeros; 4 integer variables (4 binary)
+Coefficient ranges:
+  Matrix  [2e+00, 7e+00]
+  Cost    [9e+00, 2e+01]
+  Bound   [1e+00, 1e+00]
+  RHS     [9e+00, 9e+00]
+Presolving model
+3 rows, 4 cols, 12 nonzeros 0s
+3 rows, 4 cols, 12 nonzeros 0s
+Presolve reductions: rows 3(-0); columns 4(-0); nonzeros 12(-0) - Not reduced
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   3 rows
+   4 cols (4 binary, 0 integer, 0 implied int., 0 continuous, 0 domain fixed)
+   12 nonzeros
+   Thread count 4 (of 8 threads). Using 1 max workers. Parallel search off
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ z       0       0         0   0.00%   inf             -0                 Large        0      0      0         0     0.0s
+ J       0       0         0   0.00%   inf             17                 Large        0      0      0         0     0.0s
+ T       0       0         0 100.00%   28              26                 7.69%        0      0      0        11     0.0s
+         1       0         1 100.00%   26              26                 0.00%        0      0      0        11     0.0s
+
+Solving report
+  Model             tiny
+  Status            Optimal
+  Primal bound      26
+  Dual bound        26
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0.0117900447069
+  Solution status   feasible
+                    26 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            0.04
+                    0.01 (Presolve)
+                    0.03 (Solve)
+                    0.00 (Postsolve)
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0
+  LP iterations     11
+                    0 (strong br.)
+                    0 (separation)
+                    0 (heuristics)
+SW objective: 26
+HW objective: 26
+TEST PASSED
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
