@@ -1,5 +1,11 @@
 # Ignore build output directory
+ftran_u_top/build-vitis-gcc83
 
+# Ignore Vitis project files
+ftran_u_top/ftran_u_top
+ftran_u_top/hls_config.cfg
+ftran_u_top/hls_config.cfg.in
+ftran_u_top/compile_commands.json
 
 # Ignore object files and dependent files
 .o
@@ -14,6 +20,16 @@ ftran_u_top/vitis_c++/
 ftran_u_top/ftran_u_top/hls
 ftran_u_top/ftran_u_top/logs
 ftran_u_top/ftran_u_top/reports
+
+# Ignore hidden folders
+ftran_u_top/.peers.ini
+.peers.ini
+.theia
+ftran_u_top/.theia
+ftran_u_top/.Xil
+.vscode
+.analyzer_session.json
+ftran_u_top/.analyzer_session.json
 
 #Ignore lock files
 .lock
