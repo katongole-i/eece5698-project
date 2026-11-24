@@ -73,4 +73,7 @@ if [[ ${1:-} == --cpu ]]; then
 else
   export FTRAN_U_XCLBIN="$project_dir/builds/fpga_logic.xclbin"
 fi
-exec "$project_dir/builds/host_exe" --presolve off "$model"
+solver=("$project_dir/builds/host_exe" --presolve off "$model")
+if [[ ${BASH_SOURCE[0]} == "$0" ]]; then
+  exec "${solver[@]}"
+fi
