@@ -7,7 +7,11 @@
 
 #Ignore logs folder and log files
 /logs
-.log
+*.log
+ftran_u_top/ftran_u_top/hls/.autopilot/db/*
+ftran_u_top/.cache
+ftran_u_top/vitis_c++/
+ftran_u_top/ftran_u_top/hls
 
 #Ignore lock files
 .lock

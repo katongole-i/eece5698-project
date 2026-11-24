@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libhighs_extras.a CMakeFiles/highs_extras.dir/HighsExtrasApi.cpp.o CMakeFiles/highs_extras.dir/HighsExtrasExternalDeps.cpp.o
+/usr/bin/ranlib ../../lib/libhighs_extras.a

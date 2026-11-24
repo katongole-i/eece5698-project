@@ -1,0 +1,2 @@
+"/fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/gcc-ar" cr libfoo.a CMakeFiles/foo.dir/foo.c.o
+"/fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/gcc-ranlib" libfoo.a

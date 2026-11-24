@@ -1681,62 +1681,45 @@ void HFactor::ftranUHWHelper(HVector& rhs, double expected_density, double curre
   */
   int block_count = 0;
   int block_len = 8;
+  std::unordered_map<HighsInt, int> row_blocks;
   HighsInt blocks[u_pivot_count];
   for (int i = 0; i < u_pivot_count; ++i) blocks[i]=0;
-  blocks[0]++;
-  for (HighsInt i_logic = u_pivot_count - 2; i_logic >= 0; i_logic--) {
+  for (HighsInt i_logic = u_pivot_count - 1; i_logic >= 0; i_logic--) {
     HighsInt pivotRow = u_pivot_index[i_logic];
     HighsInt start = u_start[i_logic];
     HighsInt end = u_end[i_logic];
     bool hasOverlap = false;
-    for (HighsInt backtest = i_logic+1; backtest <= i_logic+blocks[block_count]; ++backtest) {
-      HighsInt prevPivotRow = u_pivot_index[backtest];
-      HighsInt prevStart = u_start[backtest];
-      HighsInt prevEnd = u_end[backtest];
-      if (pivotRow == prevPivotRow) hasOverlap = true;
-      if (hasRangeOverlap(pivotRow, prevStart, prevEnd)) hasOverlap = true;
-      if (hasRangeOverlap(prevPivotRow, start, end)) hasOverlap = true;
-      if (hasRangeOverlap(start, prevStart, prevEnd)) hasOverlap = true;
-      if (hasRangeOverlap(end, prevStart, prevEnd)) hasOverlap = true;
-      if (hasRangeOverlap(prevStart, start, end)) hasOverlap = true;
-      if (hasRangeOverlap(prevEnd, start, end)) hasOverlap = true;
-      if (hasOverlap) break;
+    if (pivotRow != -1) {
+      hasOverlap = row_blocks[pivotRow] == block_count + 1;
+      for (HighsInt k = start; k < end && !hasOverlap; ++k) hasOverlap = row_blocks[u_index[k]] == block_count + 1;
     }
     if (hasOverlap || blocks[block_count] >= block_len) {
       block_count++;
-      blocks[block_count]++;
+    }
+    if (pivotRow != -1) {
+      row_blocks[pivotRow] = block_count + 1;
+      for (HighsInt k = start; k < end; ++k) row_blocks[u_index[k]] = block_count + 1;
     }
     blocks[block_count]++;
   }
   block_count++;
 
-  auto computeBlock = [this, u_start, u_end, u_index, u_value, rhs_array, rhs_index, rhs_synthetic_tick, rhs_count](HighsInt i_logic) mutable {
-    // Skip void
-    if (u_pivot_index[i_logic] == -1) return;
-    // Normal part
-    const HighsInt pivotRow = u_pivot_index[i_logic];
-    double pivot_multiplier = rhs_array[pivotRow];
-    if (fabs(pivot_multiplier) > kHighsTiny) {
-      pivot_multiplier /= u_pivot_value[i_logic];
-      rhs_index[rhs_count++] = pivotRow;
-      rhs_array[pivotRow] = pivot_multiplier;
-      const HighsInt start = u_start[i_logic];
-      const HighsInt end = u_end[i_logic];
-      if (i_logic >= num_row) {
-        rhs_synthetic_tick += (end - start);
-      }
-      for (HighsInt k = start; k < end; k++)
-        rhs_array[u_index[k]] -= pivot_multiplier * u_value[k];
-    } else
-      rhs_array[pivotRow] = 0;
-  };
+  assert(this->u_start.size() <= FTRAN_U_BUFFER_SIZE && "U_START");
+  assert(this->u_last_p.size() <= FTRAN_U_BUFFER_SIZE && "U_LAST_P");
+  assert(this->u_index.size() <= FTRAN_U_BUFFER_SIZE && "U_INDEX");
+  assert(this->u_value.size() <= FTRAN_U_BUFFER_SIZE && "U_VALUE");
+  assert(u_pivot_index.size() <= FTRAN_U_BUFFER_SIZE && "U_PIVOT_INDEX");
+  ftran_u_hw(FTRAN_U_LOAD, u_start, u_end, u_index, u_value, u_pivot_index.data(), u_pivot_count, this->u_index.size(), nullptr, 0, 0, nullptr, nullptr, 0, 0, nullptr, nullptr);
 
+  assert(u_pivot_value.size() <= FTRAN_U_BUFFER_SIZE && "U_PIVOT_VALUE");
+  assert(rhs.array.size() <= FTRAN_U_BUFFER_SIZE && "RHS_ARRAY");
+  assert(rhs.index.size() <= FTRAN_U_BUFFER_SIZE && "RHS_INDEX");
   HighsInt blockSum = 0;
   for (HighsInt blockI = 0; blockI < block_count; blockI++) {
-    // TODO: actually use HW function. Currently here to confirm proper integration.
-    ftran_u_hw();
-
-    for (HighsInt blockJ = 0; blockJ < blocks[blockI]; ++blockJ) computeBlock(u_pivot_count - blockSum - blockJ - 1);
+    HighsInt block_start = u_pivot_count - blockSum - blocks[blockI];
+    int block_ticks;
+    ftran_u_hw(FTRAN_U_COMPUTE, nullptr, nullptr, nullptr, nullptr, nullptr, 0, 0, u_pivot_value.data() + block_start, block_start, blocks[blockI], rhs_array, rhs_index, num_row, rhs_count, &rhs_count, &block_ticks);
+    rhs_synthetic_tick += block_ticks;
     blockSum += blocks[blockI];
   }
   // Save the count

@@ -1,0 +1,1 @@
+/fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/bin/gcc -flto -fno-fat-lto-objects CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a 
