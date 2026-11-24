@@ -1,4 +1,4 @@
-INFO: [vitis-run 60-1548] Creating build summary session with primary output /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/ftran_u_top.hlsrun_csim_summary, at Tue Nov 24 09:23:02 2026
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/ftran_u_top.hlsrun_csim_summary, at Tue Nov 24 10:34:51 2026
 INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top -config /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg -cmdlineconfig /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/config.cmdline
 
 ****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
@@ -10,7 +10,7 @@ INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_di
 
 source /fpga/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
 INFO: [HLS 200-10] Running '/fpga/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'ikato' on host 'fpga-build2vm-1.cloudlab.umass.edu' (Linux_x86_64 version 5.15.0-203-generic) on Tue Nov 24 09:23:04 MST 2026
+INFO: [HLS 200-10] For user 'ikato' on host 'fpga-build2vm-1.cloudlab.umass.edu' (Linux_x86_64 version 5.15.0-203-generic) on Tue Nov 24 10:34:54 MST 2026
 INFO: [HLS 200-10] On os Ubuntu 22.04.2 LTS
 INFO: [HLS 200-10] In directory '/proj/octfpga-PG0/ikato/proj/ftran_u_top'
 INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg
@@ -55,279 +55,217 @@ INFO: [HLS 200-1909] Reading HLS ini file /proj/octfpga-PG0/ikato/proj/ftran_u_t
 INFO: [HLS 200-1510] Running: csim_design 
 INFO: [HLS 211-200] Executing Code Analyzer instead of classic HLS C simulation
 INFO: [HLS 211-200] Compiling source code /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp as hardware code with instrumentation
-INFO: [HLS 211-200] Compiling source code /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_tb.cpp as test bench code with instrumentation
-INFO: [HLS 211-200] Compiling source code /proj/octfpga-PG0/ikato/proj/ftran_u_top/HiGHS/highs/util/HFactor.cpp as test bench code with instrumentation
 INFO: [HLS 211-200] Compiling source code /proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp as test bench code with instrumentation
 INFO: [HLS 211-200] Linking hardware code
 INFO: [HLS 211-200] Transforming hardware bitcode
 INFO: [HLS 211-200] Linking executable
-PLEASE submit a bug report and include the crash backtrace.
-Stack dump:
-0.	Program arguments: /fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld -dynamic-list=/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/data/config/prof.syms --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o /proj/octfpga-PG0/ikato/proj/ftran_u_top/vitis_c++/.internal/build/app.exe /lib/x86_64-linux-gnu/crt1.o /lib/x86_64-linux-gnu/crti.o /fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/crtbegin.o -L/fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0 -L/fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/../lib -L/lib -L/usr/lib -plugin-opt=mcpu=x86-64 -plugin-opt=O0 /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs.a /proj/octfpga-PG0/ikato/proj/ftran_u_top/build/lib/libhighs_extras.a -ldl /proj/octfpga-PG0/ikato/proj/ftran_u_top/vitis_c++/.internal/build/ftran_u_tb.cpp.0.o /proj/octfpga-PG0/ikato/proj/ftran_u_top/vitis_c++/.internal/build/HFactor.cpp.0.o /proj/octfpga-PG0/ikato/proj/ftran_u_top/vitis_c++/.internal/build/ftran_u.cpp.0.o /tmp/syn_srcs-766d1a.o -mllvm -profilerOutputDirectory=/proj/octfpga-PG0/ikato/proj/ftran_u_top/vitis_c++/.internal/profiler/0 -L/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/lib/x86_64 --whole-archive -lhls_wt_Pthreads --no-whole-archive -mllvm -instrumenterOutputDirectory=/proj/octfpga-PG0/ikato/proj/ftran_u_top/vitis_c++/.internal/instrument/app_0 -mllvm -binaryUid=app_0 -mllvm -dumpCStmtBitcode=/proj/octfpga-PG0/ikato/proj/ftran_u_top/vitis_c++/.internal/instrument/app_0/project.symbols.bc -slx-trace -save-names -mllvm -wrappers-config=/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/data/config/wrappers/wrappers_config_posix_threads64.cfg -mllvm -stubsBitcode=/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/lib/x86_64/libprofStub_wt_Pthreads.bc -L/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/lib/x86_64 --whole-archive -lprof_wt_Pthreads --no-whole-archive -lpthread /fpga/Xilinx/Vitis_HLS/2023.2/vcxx/third-party/zlib-1.2.13/lib/libzz.a -ldl -lstdc++ -lm -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc -rpath=/fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib64 -rpath=/fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib64 -rpath=/fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib --disable-new-dtags -L/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/dds_v6_0 -rpath=/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/dds_v6_0 -L/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/fft_v9_1 -rpath=/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/fft_v9_1 -L/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/fir_v7_0 -rpath=/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/fir_v7_0 -L/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/fpo_v7_1 -rpath=/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/fpo_v7_1 -L/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/lib/csim -rpath=/fpga/Xilinx/Vitis_HLS/2023.2/lnx64/lib/csim --as-needed -lgmp -lmpfr -lIp_dds_compiler_v6_0_bitacc_cmodel /fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/dds_v6_0/libstlport.so.5.1 -lIp_xfft_v9_1_bitacc_cmodel -lIp_fir_compiler_v7_2_bitacc_cmodel /fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/fir_v7_0/libgmp.so.11 /fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/fir_v7_0/libgmpxx.so.4 -lIp_floating_point_v7_1_bitacc_cmodel /fpga/Xilinx/Vitis_HLS/2023.2/lnx64/tools/fpo_v7_1/libmpfr.so.4 -lhlsmc++-GCC46 -lhlsm-GCC46 --no-as-needed /fpga/Xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/crtend.o /lib/x86_64-linux-gnu/crtn.o
-1.	Running pass 'CallGraph Pass Manager' on module 'ld-temp.o'.
-  #0 0x00000000014acb73 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x14acb73)
-  #1 0x00000000014aa69e (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x14aa69e)
-  #2 0x00000000014ad1cf (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x14ad1cf)
-  #3 0x00007f46a9c194b0 (/lib/x86_64-linux-gnu/libc.so.6+0x424b0)
-  #4 0x0000000002ed1987 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1987)
-  #5 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-  #6 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-  #7 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-  #8 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-  #9 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #10 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #11 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #12 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #13 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #14 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #15 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #16 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #17 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #18 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #19 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #20 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #21 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #22 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #23 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #24 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #25 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #26 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #27 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #28 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #29 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #30 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #31 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #32 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #33 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #34 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #35 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #36 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #37 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #38 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #39 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #40 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #41 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #42 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #43 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #44 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #45 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #46 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #47 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #48 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #49 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #50 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #51 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #52 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #53 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #54 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #55 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #56 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #57 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #58 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #59 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #60 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #61 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #62 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #63 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #64 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #65 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #66 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #67 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #68 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #69 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #70 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #71 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #72 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #73 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #74 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #75 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #76 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #77 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #78 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #79 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #80 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #81 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #82 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #83 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #84 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #85 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #86 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #87 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #88 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #89 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #90 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #91 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #92 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
- #93 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #94 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #95 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #96 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
- #97 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
- #98 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
- #99 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#100 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#101 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#102 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#103 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#104 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#105 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#106 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#107 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#108 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#109 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#110 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#111 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#112 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#113 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#114 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#115 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#116 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#117 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#118 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#119 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#120 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#121 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#122 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#123 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#124 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#125 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#126 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#127 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#128 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#129 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#130 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#131 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#132 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#133 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#134 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#135 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#136 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#137 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#138 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#139 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#140 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#141 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#142 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#143 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#144 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#145 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#146 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#147 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#148 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#149 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#150 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#151 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#152 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#153 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#154 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#155 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#156 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#157 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#158 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#159 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#160 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#161 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#162 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#163 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#164 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#165 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#166 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#167 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#168 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#169 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#170 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#171 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#172 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#173 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#174 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#175 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#176 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#177 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#178 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#179 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#180 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#181 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#182 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#183 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#184 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#185 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#186 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#187 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#188 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#189 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#190 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#191 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#192 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#193 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#194 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#195 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#196 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#197 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#198 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#199 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#200 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#201 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#202 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#203 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#204 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#205 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#206 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#207 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#208 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#209 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#210 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#211 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#212 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#213 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#214 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#215 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#216 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#217 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#218 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#219 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#220 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#221 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#222 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#223 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#224 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#225 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#226 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#227 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#228 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#229 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#230 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#231 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#232 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#233 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#234 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#235 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#236 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#237 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#238 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#239 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#240 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#241 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#242 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#243 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#244 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#245 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#246 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#247 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#248 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#249 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#250 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-#251 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#252 0x0000000002ed198c (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed198c)
-#253 0x0000000002ed1720 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1720)
-#254 0x0000000002edd1c9 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2edd1c9)
-#255 0x0000000002ed1978 (/fpga/Xilinx/Vitis_HLS/2023.2/vcxx/libexec/ld.lld+0x2ed1978)
-clang-13: error: unable to execute command: Segmentation fault (core dumped)
-clang-13: error: linker command failed due to signal (use -v to see invocation)
-slxcmd:0:0: warning: Non-zero exit code: 254 returned by 'INFO: [HLS 211-200] Linking executable'
-ERROR: [HLS 211-200] An unexpected internal error occured, please report this as a bug.
-ERROR: [HLS 211-200] Code Analyzer execution failed. Consider running the classic C simulation instead by disabling the hls.csim.code_analyzer option in the config file.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 5.02 seconds. CPU system time: 1.33 seconds. Elapsed time: 6.2 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 211-200] Determining source code dependencies
+INFO: [HLS 211-200] Generating static call graph
+INFO: [HLS 211-200] Analyzing Interfaces
+INFO: [HLS 211-200] Running executable
+Running HiGHS 1.15.1 (git hash: n/a): Copyright (c) 2026 under MIT licence terms
+Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
+Number of BV entries in BOUNDS section is 31
+MIP medium has 42 rows; 31 cols; 84 nonzeros; 31 integer variables (31 binary)
+Coefficient ranges:
+  Matrix  [1e+00, 1e+00]
+  Cost    [1e+02, 1e+02]
+  Bound   [1e+00, 1e+00]
+  RHS     [1e+00, 1e+00]
+Presolving model
+42 rows, 31 cols, 84 nonzeros 0s
+42 rows, 31 cols, 84 nonzeros 0s
+Presolve reductions: rows 42(-0); columns 31(-0); nonzeros 84(-0) - Not reduced
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   42 rows
+   31 cols (31 binary, 0 integer, 0 implied int., 0 continuous, 0 domain fixed)
+   84 nonzeros
+   Thread count 4 (of 8 threads). Using 1 max workers. Parallel search off
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ u       0       0         0   0.00%   -inf            3254               Large        0      0      0         0     0.0s
+ J       0       0         0   0.00%   -inf            3144               Large        0      0      0         0     0.0s
+ R       0       0         0   0.00%   1627            3041              46.50%        0      0      0        32     0.0s
+ C       0       0         0   0.00%   1773            2939              39.67%       12      4      0        40     0.1s
+ L       0       0         0   0.00%   1773            1773               0.00%       12      4      0        40     0.1s
+         1       0         1 100.00%   1773            1773               0.00%       12      4      0        40     0.1s
+
+Solving report
+  Model             medium
+  Status            Optimal
+  Primal bound      1773
+  Dual bound        1773
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0.0311002767743
+  Solution status   feasible
+                    1773 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            0.09
+                    0.01 (Presolve)
+                        MIP    time [calls] = 0.01 [1]
+                        subMIP time [calls] = 0.00 [1]
+                    0.08 (Solve)
+                        MIP    time [calls] = 0.06 [1]
+                        subMIP time [calls] = 0.02 [1]
+                    0.00 (Postsolve)
+                        MIP    time [calls] = 0.00 [1]
+                        subMIP time [calls] = 0.00 [1]
+  Max sub-MIP depth 2
+  Nodes             1
+  Repair LPs        0
+  LP iterations     40
+                    0 (strong br.)
+                    8 (separation)
+                    0 (heuristics)
+Running HiGHS 1.15.1 (git hash: n/a): Copyright (c) 2026 under MIT licence terms
+Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
+Number of BV entries in BOUNDS section is 31
+MIP medium has 42 rows; 31 cols; 84 nonzeros; 31 integer variables (31 binary)
+Coefficient ranges:
+  Matrix  [1e+00, 1e+00]
+  Cost    [1e+02, 1e+02]
+  Bound   [1e+00, 1e+00]
+  RHS     [1e+00, 1e+00]
+Presolving model
+42 rows, 31 cols, 84 nonzeros 0s
+42 rows, 31 cols, 84 nonzeros 0s
+Presolve reductions: rows 42(-0); columns 31(-0); nonzeros 84(-0) - Not reduced
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   42 rows
+   31 cols (31 binary, 0 integer, 0 implied int., 0 continuous, 0 domain fixed)
+   84 nonzeros
+   Thread count 4 (of 8 threads). Using 1 max workers. Parallel search off
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ u       0       0         0   0.00%   -inf            3254               Large        0      0      0         0     0.0s
+ J       0       0         0   0.00%   -inf            3144               Large        0      0      0         0     0.0s
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+ R       0       0         0   0.00%   1627            3041              46.50%        0      0      0        32     0.1s
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+ C       0       0         0   0.00%   1773            2939              39.67%       12      4      0        40     0.1s
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 326f0f40 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+ L       0       0         0   0.00%   1773            1773               0.00%       12      4      0        40     0.1s
+tracing:0:0: warning:  [MEMORY] Trying to free memory at 3241d640 that has not been allocated or has already been freed. As a result, the memory profile might be invalid: function 826
+         1       0         1 100.00%   1773            1773               0.00%       12      4      0        40     0.2s
+
+Solving report
+  Model             medium
+  Status            Optimal
+  Primal bound      1773
+  Dual bound        1773
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0.0675843243381
+  Solution status   feasible
+                    1773 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            0.15
+                    0.00 (Presolve)
+                        MIP    time [calls] = 0.00 [1]
+                        subMIP time [calls] = 0.00 [1]
+                    0.15 (Solve)
+                        MIP    time [calls] = 0.14 [1]
+                        subMIP time [calls] = 0.01 [1]
+                    0.00 (Postsolve)
+                        MIP    time [calls] = 0.00 [1]
+                        subMIP time [calls] = 0.00 [1]
+  Max sub-MIP depth 2
+  Nodes             1
+  Repair LPs        0
+  LP iterations     40
+                    0 (strong br.)
+                    8 (separation)
+                    0 (heuristics)
+SW objective: 1773
+HW objective: 1773
+TEST PASSED
+INFO: [HLS 211-200] Analyzing trace data
+INFO: [HLS 211-200] Running Code Analyzer
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 13.27 seconds. CPU system time: 3.82 seconds. Elapsed time: 27.76 seconds; current allocated memory: 0.000 MB.
 INFO: [HLS 200-1510] Running: close_project 
-ERROR: Problem running csim: child process exited abnormally
-INFO: [HLS 200-112] Total CPU user time: 7.03 seconds. Total CPU system time: 2.22 seconds. Total elapsed time: 9.41 seconds; peak allocated memory: 266.621 MB.
-INFO: [Common 17-206] Exiting vitis_hls at Tue Nov 24 09:23:13 2026...
+INFO: [HLS 200-112] Total CPU user time: 15.62 seconds. Total CPU system time: 4.92 seconds. Total elapsed time: 31.94 seconds; peak allocated memory: 266.621 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Nov 24 10:35:25 2026...
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 36s

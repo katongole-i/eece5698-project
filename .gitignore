@@ -12,6 +12,8 @@ ftran_u_top/ftran_u_top/hls/.autopilot/db/*
 ftran_u_top/.cache
 ftran_u_top/vitis_c++/
 ftran_u_top/ftran_u_top/hls
+ftran_u_top/ftran_u_top/logs
+ftran_u_top/ftran_u_top/reports
 
 #Ignore lock files
 .lock

@@ -1,4 +1,4 @@
-#include "./HiGHS/highs/Highs.h"
+#include "interfaces/highs_c_api.h"
 #include "ftran_u.h"
 
 #include <cmath>
@@ -12,11 +12,11 @@ struct Result {
 };
 
 static Result solve() {
-  Highs solver;
-  if (solver.readModel("medium.mps") != HighsStatus::kOk ||
-      solver.run() != HighsStatus::kOk)
-    return {0.0, true};
-  return {solver.getObjectiveValue(), false};
+  void* solver = Highs_create();
+  const bool ok = Highs_readModel(solver, "medium.mps") == kHighsStatusOk && Highs_run(solver) == kHighsStatusOk;
+  const Result result = {ok ? Highs_getObjectiveValue(solver) : 0.0, !ok};
+  Highs_destroy(solver);
+  return result;
 }
 
 int main() {

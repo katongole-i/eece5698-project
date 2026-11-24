@@ -1709,11 +1709,13 @@ void HFactor::ftranUHWHelper(HVector& rhs, double expected_density, double curre
   assert(this->u_index.size() <= FTRAN_U_BUFFER_SIZE && "U_INDEX");
   assert(this->u_value.size() <= FTRAN_U_BUFFER_SIZE && "U_VALUE");
   assert(u_pivot_index.size() <= FTRAN_U_BUFFER_SIZE && "U_PIVOT_INDEX");
-  ftran_u_hw(FTRAN_U_LOAD, u_start, u_end, u_index, u_value, u_pivot_index.data(), u_pivot_count, this->u_index.size(), nullptr, 0, 0, nullptr, nullptr, 0, 0, nullptr, nullptr);
-
   assert(u_pivot_value.size() <= FTRAN_U_BUFFER_SIZE && "U_PIVOT_VALUE");
   assert(rhs.array.size() <= FTRAN_U_BUFFER_SIZE && "RHS_ARRAY");
   assert(rhs.index.size() <= FTRAN_U_BUFFER_SIZE && "RHS_INDEX");
+#ifdef FTRAN_U_XRT
+  ftran_u_xrt(u_start, u_end, u_index, u_value, u_pivot_index.data(), u_pivot_count, this->u_index.size(), u_pivot_value.data(), blocks, block_count, rhs_array, rhs_index, num_row, rhs_count, rhs_synthetic_tick);
+#else
+  ftran_u_hw(FTRAN_U_LOAD, u_start, u_end, u_index, u_value, u_pivot_index.data(), u_pivot_count, this->u_index.size(), nullptr, 0, 0, nullptr, nullptr, 0, 0, nullptr, nullptr);
   HighsInt blockSum = 0;
   for (HighsInt blockI = 0; blockI < block_count; blockI++) {
     HighsInt block_start = u_pivot_count - blockSum - blocks[blockI];
@@ -1722,6 +1724,7 @@ void HFactor::ftranUHWHelper(HVector& rhs, double expected_density, double curre
     rhs_synthetic_tick += block_ticks;
     blockSum += blocks[blockI];
   }
+#endif
   // Save the count
   rhs.count = rhs_count;
   rhs.synthetic_tick +=

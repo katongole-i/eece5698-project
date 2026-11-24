@@ -1,0 +1,226 @@
+<ENTRY>
+{
+ "thisFile": "/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/ftran_u_top.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Nov 24 10:46:26 2026",
+ "timestampMillis": "1795542386971",
+ "buildStep": {
+  "cmdId": "81c069f7-a8dd-4741-bd01-a4122c5f26d3",
+  "name": "vitis-run",
+  "logFile": "/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/logs/ftran_u_top.steps.log",
+  "commandLine": "/fpga/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/vitis-run  --mode hls --cosim --config /proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg --work_dir ftran_u_top ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "/proj/octfpga-PG0/ikato/proj/ftran_u_top/hls_config.cfg",
+   "--work_dir",
+   "ftran_u_top"
+  ],
+  "iniFiles": [],
+  "cwd": "/proj/octfpga-PG0/ikato/proj/ftran_u_top"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Nov 24 10:46:26 2026",
+ "timestampMillis": "1795542386971",
+ "status": {
+  "cmdId": "81c069f7-a8dd-4741-bd01-a4122c5f26d3",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Nov 24 10:46:32 2026",
+ "timestampMillis": "1795542392131",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "ftran_u_hw",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2023.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Nov 24 10:46:32 2026",
+ "timestampMillis": "1795542392133",
+ "buildStep": {
+  "cmdId": "6cf9b9fc-9a19-47cb-af56-204992f83cf5",
+  "name": "cosim_design",
+  "logFile": "/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/hls.log",
+  "commandLine": "cosim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/proj/octfpga-PG0/ikato/proj/ftran_u_top"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Nov 24 10:46:32 2026",
+ "timestampMillis": "1795542392135",
+ "status": {
+  "cmdId": "6cf9b9fc-9a19-47cb-af56-204992f83cf5",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Nov 24 10:46:32 2026",
+ "timestampMillis": "1795542392136",
+ "report": {
+  "path": "/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls/sim/report/ftran_u_hw_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Nov 24 10:46:32 2026",
+ "timestampMillis": "1795542392138",
+ "report": {
+  "path": "/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Nov 24 10:46:32 2026",
+ "timestampMillis": "1795542392139",
+ "report": {
+  "path": "/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Nov 24 10:46:32 2026",
+ "timestampMillis": "1795542392141",
+ "report": {
+  "path": "/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Nov 24 10:46:32 2026",
+ "timestampMillis": "1795542392143",
+ "report": {
+  "path": "/proj/octfpga-PG0/ikato/proj/ftran_u_top/ftran_u_top/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Nov 24 10:46:46 2026",
+ "timestampMillis": "1795542406340",
+ "status": {
+  "cmdId": "6cf9b9fc-9a19-47cb-af56-204992f83cf5",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Nov 24 10:46:46 2026",
+ "timestampMillis": "1795542406560",
+ "status": {
+  "cmdId": "81c069f7-a8dd-4741-bd01-a4122c5f26d3",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Nov 24 10:46:46 2026",
+ "timestampMillis": "1795542406560",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Nov 24 10:46:46 2026",
+ "timestampMillis": "1795542406561",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

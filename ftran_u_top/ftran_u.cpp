@@ -14,14 +14,14 @@ int ftran_u_hw(int mode, const int* u_start, const int* u_end,
                const double* block_pivot_value, int block_start, int block_size,
                double* rhs_array, int* rhs_index, int rhs_size, int rhs_count,
                int* rhs_count_out, int* block_synthetic_ticks) {
-#pragma HLS INTERFACE mode=m_axi port=u_start offset=slave bundle=factor depth=16360
-#pragma HLS INTERFACE mode=m_axi port=u_end offset=slave bundle=factor_1 depth=16360
-#pragma HLS INTERFACE mode=m_axi port=u_index offset=slave bundle=factor depth=16360
-#pragma HLS INTERFACE mode=m_axi port=u_value offset=slave bundle=factor_1 depth=16360
-#pragma HLS INTERFACE mode=m_axi port=u_pivot_index offset=slave bundle=factor_2 depth=16360
-#pragma HLS INTERFACE mode=m_axi port=block_pivot_value offset=slave bundle=work depth=8
-#pragma HLS INTERFACE mode=m_axi port=rhs_array offset=slave bundle=work depth=16360
-#pragma HLS INTERFACE mode=m_axi port=rhs_index offset=slave bundle=work depth=16360
+#pragma HLS INTERFACE mode=m_axi port=u_start offset=slave bundle=factor depth=FTRAN_U_BUFFER_SIZE
+#pragma HLS INTERFACE mode=m_axi port=u_end offset=slave bundle=factor_1 depth=FTRAN_U_BUFFER_SIZE
+#pragma HLS INTERFACE mode=m_axi port=u_index offset=slave bundle=factor depth=FTRAN_U_BUFFER_SIZE
+#pragma HLS INTERFACE mode=m_axi port=u_value offset=slave bundle=factor_1 depth=FTRAN_U_BUFFER_SIZE
+#pragma HLS INTERFACE mode=m_axi port=u_pivot_index offset=slave bundle=factor_2 depth=FTRAN_U_BUFFER_SIZE
+#pragma HLS INTERFACE mode=m_axi port=block_pivot_value offset=slave bundle=work depth=FTRAN_U_BLOCK_SIZE
+#pragma HLS INTERFACE mode=m_axi port=rhs_array offset=slave bundle=work depth=FTRAN_U_BUFFER_SIZE
+#pragma HLS INTERFACE mode=m_axi port=rhs_index offset=slave bundle=work depth=FTRAN_U_BUFFER_SIZE
 #pragma HLS INTERFACE mode=s_axilite port=mode bundle=control
 #pragma HLS INTERFACE mode=s_axilite port=u_start bundle=control
 #pragma HLS INTERFACE mode=s_axilite port=u_end bundle=control
@@ -57,6 +57,8 @@ int ftran_u_hw(int mode, const int* u_start, const int* u_end,
       index_buffer[i] = u_index[i];
       value_buffer[i] = u_value[i];
     }
+    if (rhs_count_out) *rhs_count_out = rhs_count;
+    if (block_synthetic_ticks) *block_synthetic_ticks = 0;
     return 0;
   }
 
@@ -73,9 +75,12 @@ int ftran_u_hw(int mode, const int* u_start, const int* u_end,
 
       multiplier /= block_pivot_value[j];
       rhs_index[rhs_count++] = pivot_row;
+      #pragma HLS DEPENDENCE variable=rhs_array type=inter dependent=false  
       rhs_array[pivot_row] = multiplier;
       if (i_logic >= rhs_size) ticks += end - start;
       for (int k = start; k < end; ++k) {
+        #pragma HLS PIPELINE II=1
+        #pragma HLS DEPENDENCE variable=rhs_array type=inter dependent=false  
         rhs_array[index_buffer[k]] -= multiplier * value_buffer[k];
       }
     } else {
