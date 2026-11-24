@@ -6,6 +6,7 @@ ftran_u_top/ftran_u_top
 ftran_u_top/hls_config.cfg
 ftran_u_top/hls_config.cfg.in
 ftran_u_top/compile_commands.json
+ftran_u_top/vitis-comp.json
 
 # Ignore object files and dependent files
 .o
